@@ -1,6 +1,10 @@
 # Simple Text RAG Go Frontend
 Go Frontend App for [https://github.com/didil/simple-text-rag](https://github.com/didil/simple-text-rag). Receives requests via a REST API and sends them to the simple-text-rag app via gRPC.
 
+*This is a demo app. The code is not production ready*
+
+The companion article can be found on [Adil's Backend & Cloud Engineering Blog](https://open.substack.com/pub/didil/p/simple-text-rag?r=63gj&utm_campaign=post&utm_medium=web)
+
 ## Development Setup
 
 ### Install protoc

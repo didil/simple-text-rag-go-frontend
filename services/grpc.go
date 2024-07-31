@@ -2,7 +2,6 @@ package services
 
 import (
 	"context"
-	"sync"
 
 	pb "github.com/didil/simple-text-rag-go-frontend/grpc_gen/protos"
 	"google.golang.org/grpc"
@@ -17,13 +16,11 @@ type GrpcClient interface {
 func NewGrpcClient(addr string) (GrpcClient, error) {
 	return &grpcClient{
 		addr: addr,
-		mu:   sync.Mutex{},
 	}, nil
 }
 
 type grpcClient struct {
 	addr string
-	mu   sync.Mutex
 }
 
 func (c *grpcClient) newQAServiceClient() (pb.QAServiceClient, error) {
